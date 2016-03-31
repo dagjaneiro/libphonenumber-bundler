@@ -1,0 +1,21 @@
+{
+  "name": "libphonenumber-bundler",
+  "version": "1.0.0",
+  "description": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "libphonenumber",
+    "google",
+    "bundle",
+    "compiler"
+  ],
+  "author": "Daniel Janeiro",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "request": "^2.69.0"
+  }
+}
