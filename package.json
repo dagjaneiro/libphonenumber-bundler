@@ -1,21 +1,23 @@
 {
   "name": "libphonenumber-bundler",
-  "version": "1.0.0",
-  "description": "0.1.0",
-  "main": "index.js",
+  "version": "0.4.0",
+  "description": "Google's libphonenumber bundler",
+  "main": "lpn-bundler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "libphonenumber",
     "google",
-    "bundle",
+    "bundler",
     "compiler"
   ],
   "author": "Daniel Janeiro",
   "license": "MIT",
   "dependencies": {
+    "closure-compiler-service": "^0.6.1",
     "commander": "^2.9.0",
-    "request": "^2.69.0"
+    "es6-promisify": "^4.0.0",
+    "octonode": "^0.7.5"
   }
 }
