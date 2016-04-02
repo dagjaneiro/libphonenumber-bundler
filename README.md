@@ -2,6 +2,10 @@
 
 A CLI utility that compiles and bundles google's [libphonenumber](https://github.com/googlei18n/libphonenumber) in a standalone javascript file.
 
+## Instalation
+
+`$ npm install -g libphonenumber-bundler`
+
 ## Examples
 
 ### Listing available versions for bundling
@@ -45,3 +49,8 @@ matched: [libphonenumber-7.2.7]
 compiling code...done
 saving file...done
 file saved to /Users/daj/libphonenumber.js
+```
+
+## License
+
+MIT

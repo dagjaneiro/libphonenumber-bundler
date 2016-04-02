@@ -14,6 +14,17 @@
   ],
   "author": "Daniel Janeiro",
   "license": "MIT",
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "https://github.com/dagjaneiro/libphonenumber-bundler.git"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "bin": {
+    "lpn-bundler": "./lpn-bundler.js"
+  },
   "dependencies": {
     "closure-compiler-service": "^0.6.1",
     "commander": "^2.9.0",

@@ -11,14 +11,11 @@ const writeFile = promisify(fs.writeFile);
 const stdout = process.stdout;
 
 
-program
-  .version(pkg.version)
-  .option('-t, --tag <tag>', 'The tag version you want to bundle')
-  .option('-o, --output <file>', 'The output file');
+program.version(pkg.version);
 
 program
   .command('list')
-  .description('List all libphonenumber versions')
+  .description('list all libphonenumber tags')
   .action(() => {
     stdout.write('fetching tags...');
     bundler.getTags().then((tags) => {
@@ -32,7 +29,9 @@ program
 
 program
   .command('bundle')
-  .description('[-t -o] Bundles a specific version of libphonenumber')
+  .description('bundles a specific version of libphonenumber')
+  .option('-t, --tag <tag>', 'the tag version you want to bundle (default: last version)')
+  .option('-o, --output <file>', 'the output file (default: libphonenumber-bundle.js)')
   .action(() => {
     let file;
     let tagName;
@@ -65,4 +64,14 @@ program
     });
   });
 
+program
+  .command('*')
+  .action(() => {
+    program.outputHelp();
+  });
+
 program.parse(process.argv);
+
+if (!process.argv.slice(2).length) {
+  program.outputHelp();
+}
